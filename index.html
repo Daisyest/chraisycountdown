@@ -1377,7 +1377,7 @@ function cycleStatus(id){
   statusMap[id] = newStatus;
   renderTasks();
   renderProgress();
-  saveState();
+  set(ref(db, 'status/' + id), newStatus);
   if(whoAmI) logActivity('status', id, 'marked as ' + statusLabel(newStatus).toLowerCase());
 }
 
