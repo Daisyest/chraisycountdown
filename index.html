@@ -829,11 +829,6 @@ function initSync(){
   });
 
   renderWhoAmI();
-  setSync('Saving&hellip;');
-  set(statusRef, statusMap)
-    .then(()=> setSync('Live with Chris'))
-    .catch(()=> setSync('Could not save, check your connection'));
-}
 
 function logActivity(type, taskId, detail){
   if(!whoAmI) return;
